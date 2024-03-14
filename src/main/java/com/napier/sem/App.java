@@ -9,7 +9,7 @@ public class App {
         App a = new App();
 
         if(args.length < 1){
-            a.connect("localhost:33060", 30000);
+            a.connect("localhost:33060", 5000);
         }else{
             a.connect(args[0], Integer.parseInt(args[1]));
         }
@@ -42,7 +42,7 @@ public class App {
             System.exit(-1);
         }
 
-        int retries = 10;
+        int retries = 100;
         for (int i = 0; i < retries; ++i) {
             System.out.println("Connecting to database...");
             try {
@@ -135,6 +135,7 @@ public class App {
             // Check one is returned
             if (rset.next()) {
                 Employee emp = new Employee();
+                emp.emp_no = ID;
                 emp.first_name = rset.getString("employee_first_name");
                 emp.last_name = rset.getString("employee_last_name");
                 emp.title = rset.getString("employee_title");

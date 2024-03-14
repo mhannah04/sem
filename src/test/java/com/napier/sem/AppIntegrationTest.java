@@ -28,6 +28,7 @@ public class AppIntegrationTest {
     void testGetEmployeeCurrent()
     {
         Employee emp = app.getEmployeeCurrent(10734);
+        System.out.println(emp.emp_no);
         assertEquals(emp.emp_no, 10734);
         assertEquals(emp.first_name, "Sachar");
         assertEquals(emp.last_name, "Erdi");
