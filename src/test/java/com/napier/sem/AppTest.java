@@ -45,6 +45,16 @@ public class AppTest
     }
 
 
+    @Test
+    void printSalariesTestNull()
+    {
+        ArrayList<Employee> employess = null;
+        app.printSalaries(employess);
+
+
+    }
+
+
 
     @Test
     void displayEmployeeTestContainsNull()
