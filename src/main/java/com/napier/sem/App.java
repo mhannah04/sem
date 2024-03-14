@@ -94,7 +94,7 @@ public class App {
             // Check one is returned
             if (rset.next()) {
                 Employee emp = new Employee();
-                //emp.emp_no = rset.getInt("emp_no");
+                emp.emp_no = rset.getInt("emp_no");
                 emp.first_name = rset.getString("first_name");
                 emp.last_name = rset.getString("last_name");
                 return emp;
