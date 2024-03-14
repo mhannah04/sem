@@ -1,9 +1,9 @@
 package com.napier.sem;
+
 /**
  * Represents an employee
  */
-public class Employee
-{
+public class Employee {
     /**
      * Employee number
      */
