@@ -1,0 +1,25 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class App {
+  + App(): 
+  + getEmployee(int): Employee
+  + disconnect(): void
+  + main(String[]): void
+  + displayEmployee(Employee): void
+  + getEmployeeCurrent(int): Employee
+  + displayEmployeeSalary(ArrayList<Employee>): void
+  + getEmployeeByTitle(String): ArrayList<Employee>
+  + connect(): void
+}
+class Employee {
+  + emp_no: int
+  + first_name: String
+
+  + Employee(): 
+}
+
+@enduml
