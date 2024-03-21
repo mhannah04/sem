@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - lab08
       - develop
 jobs:
   UnitTests:
@@ -44,12 +43,13 @@ jobs:
           docker rm employees
           docker image rm database
       - name: CodeCov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v4.0.1
         with:
-          # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          token: ${{ secrets.CODECOV_TOKEN }} # now required for public repos too
           directory: ./target/site/jacoco
           flags: Integration Tests # optional
           verbose: true # optional (default = false)
+          slug: mhannah04/sem
   build:
     name: Build and Start Using docker-compose
     runs-on: ubuntu-20.04
